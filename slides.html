@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>九州電力 スライド（原資料の再現）</title>
+<meta name="description" content="九州電力についてのプレゼンテーション資料（全22ページ）をウェブページとして再現したもの。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/slides.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+<a class="skip" href="#s1">本文へスキップ</a>
+
+<header class="bar" id="bar">
+  <div class="bar__row">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">← 読みもの版へ</span>
+    </a>
+    <span class="bar__spacer"></span>
+    <p class="bar__count" id="count"><b>1</b><i>/</i>22</p>
+    <div class="bar__nav">
+      <button class="btn btn--icon" id="prev" type="button" aria-label="前のスライド">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="btn btn--icon" id="next" type="button" aria-label="次のスライド">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <button class="btn" id="gridBtn" type="button" aria-pressed="false" aria-label="一覧表示に切り替え">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v5H4zM14 5h6v5h-6zM4 14h6v5H4zM14 14h6v5h-6z"/></svg>
+      <span>一覧</span>
+    </button>
+    <button class="btn btn--accent" id="playBtn" type="button" aria-pressed="false" aria-label="発表モード（全画面）">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+      <span>発表</span>
+    </button>
+    <button class="btn" id="ansBtn" type="button" aria-pressed="false" aria-label="クイズの正解の表示を切り替え"><span>正解を隠す</span></button>
+  </div>
+  <nav class="chapters" id="chapters" aria-label="章">
+    <a href="#s1" data-from="1">表紙</a>
+    <a href="#s4" data-from="4"><i>01</i>会社概要</a>
+    <a href="#s6" data-from="6"><i>02</i>他社との違い</a>
+    <a href="#s8" data-from="8"><i>03</i>地熱発電</a>
+    <a href="#s11" data-from="11"><i>04</i>バイオマス</a>
+    <a href="#s14" data-from="14"><i>05</i>太陽光</a>
+    <a href="#s17" data-from="17"><i>06</i>産業との関係</a>
+    <a href="#s19" data-from="19"><i>07</i>クイズ</a>
+  </nav>
+  <div class="bar__progress"><span id="progress"></span></div>
+</header>
+
+<section class="intro" id="top">
+  <p class="intro__eyebrow">KYUSHU ELECTRIC POWER</p>
+  <h1 class="intro__title">九州電力</h1>
+  <p class="intro__lead">地熱・バイオマス・太陽光と、九州の産業。<br>発表用スライド全22ページ。</p>
+  <p class="intro__hint"><kbd>←</kbd><kbd>→</kbd> でページ送り／<b>発表</b>で全画面表示</p>
+</section>
+
+<main class="deck" id="deck">
+
+<!-- ============ 1 表紙 ============ -->
+<section class="item" id="s1"><p class="item__no"><b>01</b><em>表紙</em></p><div class="stage"><div class="sl">
+  <div class="imgbox" style="--x:0;--y:60;--w:842;--h:475"><img src="assets/img/hero.jpg" alt="夜明けの九州の街並みと夜景"></div>
+  <p class="e" style="--x:315;--y:262;--fs:53;--fw:900;--co:#fff;--ls:.02em">九州電力</p>
+</div></div></section>
+
+<!-- ============ 2 目次 ============ -->
+<section class="item" id="s2"><p class="item__no"><b>02</b><em>目次</em></p><div class="stage"><div class="sl">
+  <div class="box" style="--x:0;--y:62;--w:198;--h:472;--bg:#19c28a"></div>
+  <p class="e ctr w" style="--x:0;--y:269;--w:198;--fs:28;--fw:700;--co:#fff">目次</p>
+
+  <p class="e" style="--x:261;--y:138;--fs:25;--fw:900;--co:#19c28a">01</p>
+  <p class="e" style="--x:305;--y:142;--fs:21;--fw:900;--co:#0e9e6e">会社概要</p>
+  <div class="dotted" style="--x:401;--y:155;--w:311"></div>
+  <div class="chip" style="--x:718;--y:140;--w:74;--h:25;--fs:14">03</div>
+
+  <p class="e" style="--x:261;--y:184;--fs:25;--fw:900;--co:#19c28a">02</p>
+  <p class="e" style="--x:305;--y:188;--fs:21;--fw:900;--co:#0e9e6e">他社との違い</p>
+  <div class="dotted" style="--x:443;--y:201;--w:269"></div>
+  <div class="chip" style="--x:718;--y:188;--w:74;--h:25;--fs:14">05</div>
+
+  <p class="e" style="--x:261;--y:231;--fs:25;--fw:900;--co:#19c28a">03</p>
+  <p class="e" style="--x:305;--y:235;--fs:21;--fw:900;--co:#0e9e6e">地熱発電</p>
+  <div class="dotted" style="--x:401;--y:248;--w:311"></div>
+  <div class="chip" style="--x:718;--y:234;--w:74;--h:25;--fs:14">07</div>
+
+  <p class="e" style="--x:261;--y:277;--fs:25;--fw:900;--co:#19c28a">04</p>
+  <p class="e" style="--x:305;--y:281;--fs:21;--fw:900;--co:#0e9e6e">バイオマス</p>
+  <div class="dotted" style="--x:422;--y:294;--w:290"></div>
+  <div class="chip" style="--x:718;--y:280;--w:74;--h:25;--fs:14">10</div>
+
+  <p class="e" style="--x:261;--y:324;--fs:25;--fw:900;--co:#19c28a">05</p>
+  <p class="e" style="--x:305;--y:328;--fs:21;--fw:900;--co:#0e9e6e">太陽光</p>
+  <div class="dotted" style="--x:380;--y:341;--w:332"></div>
+  <div class="chip" style="--x:718;--y:326;--w:74;--h:25;--fs:14">13</div>
+
+  <p class="e" style="--x:261;--y:370;--fs:25;--fw:900;--co:#19c28a">06</p>
+  <p class="e" style="--x:305;--y:374;--fs:21;--fw:900;--co:#0e9e6e">九州の産業との関係</p>
+  <div class="dotted" style="--x:506;--y:387;--w:206"></div>
+  <div class="chip" style="--x:718;--y:374;--w:74;--h:25;--fs:14">16</div>
+
+  <p class="e" style="--x:261;--y:417;--fs:25;--fw:900;--co:#19c28a">07</p>
+  <p class="e" style="--x:305;--y:421;--fs:21;--fw:900;--co:#0e9e6e">クイズ</p>
+  <div class="dotted" style="--x:380;--y:434;--w:332"></div>
+  <div class="chip" style="--x:718;--y:420;--w:74;--h:25;--fs:14">18</div>
+</div></div></section>
+
+<!-- ============ 3 Contents ============ -->
+<section class="item" id="s3"><p class="item__no"><b>03</b><em>Contents</em></p><div class="stage"><div class="sl">
+  <div class="imgbox imgbox--fill" style="--x:0;--y:60;--w:842;--h:208"><img src="assets/img/contents-banner.jpg" alt="九州のエネルギーを俯瞰したイラスト"></div>
+  <p class="e" style="--x:110;--y:206;--fs:40;--fw:900;--co:#fff;--ls:.01em">Contents</p>
+
+  <p class="e" style="--x:48;--y:288;--fs:21;--fw:900;--co:#19c28a">01</p>
+  <p class="e" style="--x:106;--y:286;--fs:21;--fw:900;--co:#0e9e6e">会社概要</p>
+  <p class="e" style="--x:309;--y:288;--fs:21;--fw:900;--co:#19c28a">02</p>
+  <p class="e" style="--x:366;--y:286;--fs:21;--fw:900;--co:#0e9e6e">他社との違い</p>
+  <p class="e" style="--x:599;--y:288;--fs:21;--fw:900;--co:#19c28a">03</p>
+  <p class="e" style="--x:657;--y:286;--fs:21;--fw:900;--co:#0e9e6e">地熱発電</p>
+
+  <p class="e" style="--x:48;--y:358;--fs:21;--fw:900;--co:#19c28a">04</p>
+  <p class="e" style="--x:101;--y:356;--fs:21;--fw:900;--co:#0e9e6e">バイオマス</p>
+  <p class="e" style="--x:309;--y:358;--fs:21;--fw:900;--co:#19c28a">05</p>
+  <p class="e" style="--x:365;--y:356;--fs:21;--fw:900;--co:#0e9e6e">太陽光</p>
+  <p class="e" style="--x:599;--y:358;--fs:21;--fw:900;--co:#19c28a">06</p>
+  <p class="e" style="--x:654;--y:356;--fs:21;--fw:900;--co:#0e9e6e">産業との関係</p>
+
+  <p class="e" style="--x:48;--y:435;--fs:21;--fw:900;--co:#19c28a">07</p>
+  <p class="e" style="--x:105;--y:433;--fs:21;--fw:900;--co:#0e9e6e">クイズ</p>
+</div></div></section>
+
+<!-- ============ 4 中扉 会社概要 ============ -->
+<section class="item" id="s4"><p class="item__no"><b>04</b><em>中扉 ― 会社概要</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">会社概要</p>
+  <div class="box div-rule"></div>
+</div></div></section>
+
+<!-- ============ 5 会社概要 ============ -->
+<section class="item" id="s5"><p class="item__no"><b>05</b><em>会社概要</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">会社概要</p>
+
+  <div class="box card" style="--x:48;--y:178;--w:368;--h:58;--r:9;--bg:#f3f5f4;--bd:#cbe8dc"></div>
+  <div class="imgbox imgbox--fit" style="--x:64;--y:192;--w:30;--h:30"><img src="assets/img/ic-clock.jpg" alt=""></div>
+  <p class="e" style="--x:116;--y:183;--fs:12.5;--co:#595959">設立</p>
+  <p class="e" style="--x:116;--y:201;--fs:20;--fw:700">1951年5月1日</p>
+
+  <div class="box card" style="--x:48;--y:264;--w:368;--h:58;--r:9;--bg:#f3f5f4;--bd:#cbe8dc"></div>
+  <div class="imgbox imgbox--fit" style="--x:64;--y:278;--w:30;--h:30"><img src="assets/img/ic-chart.jpg" alt=""></div>
+  <p class="e" style="--x:116;--y:267;--fs:12.5;--co:#595959">総販売電力量</p>
+  <p class="e" style="--x:116;--y:285;--fs:20;--fw:700">983億kWh（全国4位）</p>
+
+  <div class="box card" style="--x:48;--y:350;--w:368;--h:58;--r:9;--bg:#f3f5f4;--bd:#cbe8dc"></div>
+  <div class="imgbox imgbox--fit" style="--x:64;--y:364;--w:30;--h:30"><img src="assets/img/ic-shield.jpg" alt=""></div>
+  <p class="e" style="--x:116;--y:355;--fs:12.5;--co:#595959">持株会社化</p>
+  <p class="e" style="--x:116;--y:374;--fs:16.5;--fw:700">2026年10月　純粋持株会社体制へ移行</p>
+
+  <div class="box card" style="--x:48;--y:436;--w:368;--h:58;--r:9;--bg:#f3f5f4;--bd:#cbe8dc"></div>
+  <div class="imgbox imgbox--fit" style="--x:64;--y:450;--w:30;--h:30"><img src="assets/img/ic-coins.jpg" alt=""></div>
+  <p class="e" style="--x:116;--y:441;--fs:12.5;--co:#595959">資本金</p>
+  <p class="e" style="--x:116;--y:458;--fs:20;--fw:700">2,373億円</p>
+
+  <div class="imgbox circle" style="--x:469;--y:157;--w:345;--h:345"><img src="assets/img/hq.jpg" alt="九州電力の本社ビル"></div>
+</div></div></section>
+
+<!-- ============ 6 中扉 他社との違い ============ -->
+<section class="item" id="s6"><p class="item__no"><b>06</b><em>中扉 ― 他社との違い</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">他社との違い</p>
+  <div class="box div-rule"></div>
+  <p class="e div-sub">環境へのやさしさ</p>
+</div></div></section>
+
+<!-- ============ 7 他社との比較 ============ -->
+<section class="item" id="s7"><p class="item__no"><b>07</b><em>他社との比較</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">他社との比較</p>
+  <p class="e" style="--x:89;--y:180;--fs:21;--fw:700">非化石電源の割合がトップ！</p>
+
+  <div class="deco" style="--x:372;--y:103;--w:208;--h:117"><img src="assets/deco/cloud7.png" alt=""></div>
+  <p class="e ctr w" style="--x:372;--y:133;--w:208;--fs:21;--fw:700;--co:#fff;--lh:1.19">安定で環境
+にやさしい</p>
+
+  <div class="grid-line" style="--x:270;--y:236;--h:236"></div>
+  <div class="grid-line" style="--x:346;--y:236;--h:236"></div>
+  <div class="grid-line" style="--x:423;--y:236;--h:236"></div>
+  <div class="grid-line" style="--x:525;--y:236;--h:236"></div>
+
+  <p class="e" style="--x:41;--y:246;--fs:14;--fw:700">九州</p>
+  <div class="bar-seg bar-l" style="--x:117;--y:245;--w:152;--h:25;--bg:#17c98e"></div>
+  <div class="bar-seg bar-r" style="--x:269;--y:245;--w:179;--h:25;--bg:#0d5f63"></div>
+  <p class="e" style="--x:455;--y:248;--fs:15;--fw:700;--co:#0e9e6e">65.0%</p>
+
+  <p class="e" style="--x:41;--y:284;--fs:14;--fw:700">関西</p>
+  <div class="bar-seg bar-l" style="--x:117;--y:283;--w:86;--h:25;--bg:#17c98e"></div>
+  <div class="bar-seg bar-r" style="--x:203;--y:283;--w:177;--h:25;--bg:#0d5f63"></div>
+  <p class="e" style="--x:387;--y:286;--fs:14;--fw:700;--co:#333">51.6%</p>
+
+  <p class="e" style="--x:41;--y:323;--fs:14;--fw:700">北陸</p>
+  <div class="bar-seg bar-round" style="--x:117;--y:322;--w:183;--h:25;--bg:#17c98e"></div>
+  <p class="e" style="--x:308;--y:325;--fs:14;--fw:700;--co:#333">36.0%</p>
+
+  <p class="e" style="--x:41;--y:362;--fs:14;--fw:700">全国平均</p>
+  <div class="bar-seg bar-l" style="--x:117;--y:360;--w:118;--h:25;--bg:#17c98e"></div>
+  <div class="bar-seg bar-r" style="--x:235;--y:360;--w:52;--h:25;--bg:#0d5f63"></div>
+  <p class="e" style="--x:295;--y:364;--fs:14;--fw:700;--co:#333">33.4%</p>
+
+  <p class="e" style="--x:41;--y:400;--fs:14;--fw:700">東京</p>
+  <div class="bar-seg bar-round" style="--x:117;--y:399;--w:76;--h:25;--bg:#17c98e"></div>
+  <p class="e" style="--x:201;--y:402;--fs:14;--fw:700;--co:#333">15.0%</p>
+
+  <div class="dot" style="--x:110;--y:481;--bg:#17c98e"></div>
+  <p class="e" style="--x:123;--y:477;--fs:11;--co:#4a4a4a">再エネ</p>
+  <div class="dot" style="--x:173;--y:481;--bg:#0d5f63"></div>
+  <p class="e" style="--x:186;--y:477;--fs:11;--co:#4a4a4a">原子力</p>
+  <p class="e" style="--x:258;--y:475;--fs:11;--fw:700;--co:#6a6e73">30%</p>
+  <p class="e" style="--x:332;--y:475;--fs:11;--fw:700;--co:#6a6e73">45%</p>
+  <p class="e" style="--x:412;--y:475;--fs:11;--fw:700;--co:#6a6e73">60%</p>
+  <p class="e" style="--x:514;--y:475;--fs:11;--fw:700;--co:#6a6e73">80%</p>
+
+  <div class="imgbox imgbox--fill" style="--x:554;--y:211;--w:288;--h:242"><img src="assets/img/iso-energy.jpg" alt="多様な電源が並ぶ九州のエネルギーのイラスト"></div>
+</div></div></section>
+
+<!-- ============ 8 中扉 地熱発電 ============ -->
+<section class="item" id="s8"><p class="item__no"><b>08</b><em>中扉 ― 地熱発電</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">地熱発電</p>
+  <div class="box div-rule"></div>
+  <p class="e div-sub">地球の熱を、暮らしの熱に</p>
+</div></div></section>
+
+<!-- ============ 9 地熱発電 ============ -->
+<section class="item" id="s9"><p class="item__no"><b>09</b><em>地熱発電 ― メリットとデメリット</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">地熱発電</p>
+
+  <div class="box card" style="--x:40;--y:164;--w:242;--h:332;--r:14;--bg:#f3f5f4;--bd:#bfe6d5"></div>
+  <p class="e" style="--x:56;--y:186;--fs:16;--co:#595959">日本の地熱資源量</p>
+  <p class="e" style="--x:59;--y:212;--fs:21;--fw:700;--co:#0e9e6e">世界第3位</p>
+  <p class="e" style="--x:59;--y:238;--fs:21;--fw:700;--co:#0e9e6e">（2300万kW）</p>
+  <p class="e" style="--x:48;--y:282;--fs:16;--co:#595959">国内地熱設備容量に占める割合</p>
+  <p class="e" style="--x:79;--y:311;--fs:21;--fw:700;--co:#0e9e6e">約4割</p>
+  <p class="e" style="--x:45;--y:365;--fs:16;--co:#595959">主要各社の設備容量</p>
+  <p class="e" style="--x:65;--y:396;--fs:21;--fw:700;--co:#0e9e6e">九州21.1万kW</p>
+  <p class="e" style="--x:65;--y:421;--fs:18;--fw:700">東北15.3万kW</p>
+  <p class="e" style="--x:65;--y:444;--fs:18;--fw:700">北海道2.5万kW</p>
+
+  <div class="box" style="--x:308;--y:164;--w:242;--h:332;--r:14;--bg:#f2f2f2"></div>
+  <p class="e" style="--x:386;--y:171;--fs:17;--fw:700">メリット</p>
+  <p class="e" style="--x:314;--y:198;--fs:21;--fw:700;--co:#0e9e6e">・安定して発電できる</p>
+  <p class="e" style="--x:330;--y:231;--fs:14;--co:#404040;--lh:1.14">天候や昼夜に左右されにくく、
+設備利用率は83％と試算されて
+いる。</p>
+  <p class="e" style="--x:314;--y:290;--fs:21;--fw:700;--co:#0e9e6e">・CO2排出量が少ない</p>
+  <p class="e" style="--x:324;--y:320;--fs:14;--co:#404040;--lh:1.14">ライフサイクルCO2排出量は
+約13g-CO2/kWhと非常に低い水準。</p>
+  <p class="e" style="--x:314;--y:383;--fs:21;--fw:700;--co:#0e9e6e">・地域で有効利用できる</p>
+  <p class="e" style="--x:321;--y:415;--fs:14;--co:#404040;--lh:1.14">熱水や排熱をハウス栽培・養殖
+・暖房などに活用できる。</p>
+
+  <div class="box" style="--x:572;--y:164;--w:242;--h:334;--r:14;--bg:#f2f2f2"></div>
+  <p class="e" style="--x:648;--y:171;--fs:17;--fw:700">デメリット</p>
+  <p class="e" style="--x:587;--y:197;--fs:21;--fw:700;--co:#c0392b">・開発に長期間かかる</p>
+  <p class="e" style="--x:599;--y:227;--fs:14;--co:#404040;--lh:1.14">調査・掘削・環境アセスメント
+が必要で、稼働まで10年以上か
+かる場合がある。</p>
+  <p class="e" style="--x:586;--y:288;--fs:21;--fw:700;--co:#c0392b">・温泉地との調整</p>
+  <p class="e" style="--x:595;--y:322;--fs:14;--co:#404040;--lh:1.14">温泉地に多く存在し、地域との
+合意形成が重要。</p>
+  <p class="e" style="--x:584;--y:384;--fs:21;--fw:700;--co:#c0392b">・出力低下の可能性</p>
+  <p class="e" style="--x:592;--y:417;--fs:14;--co:#404040;--lh:1.14">蒸気・熱水の変化により発電量が
+低下する場合があり、継続的な
+管理が必要。</p>
+</div></div></section>
+
+<!-- ============ 10 バイナリー方式 ============ -->
+<section class="item" id="s10"><p class="item__no"><b>10</b><em>地熱発電のバイナリー方式</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">地熱発電のバイナリー方式</p>
+
+  <div class="box" style="--x:32;--y:178;--w:408;--h:240;--r:14;--bg:#ff0000"></div>
+  <p class="e ctr w" style="--x:32;--y:191;--w:408;--fs:24.5;--fw:700;--co:#fff">重要語句：バイナリー発電</p>
+  <div class="box" style="--x:46;--y:256;--w:378;--h:142;--r:8;--bg:#fff"></div>
+  <p class="e" style="--x:62;--y:284;--fs:17;--fw:700;--lh:1.04">約70～150℃の比較的低温な温泉や熱水を
+使い、水より沸点の低い媒体（アンモニア）
+を温め、その蒸気でタービンを回して
+発電する仕組み。</p>
+
+  <div class="box" style="--x:32;--y:428;--w:410;--h:96;--r:8;--bg:#d9d9d9"></div>
+  <p class="e" style="--x:62;--y:449;--fs:17;--fw:700;--lh:1.24">九州電力の八丁原バイナリー発電所は、
+日本初の事業用地熱バイナリー発電所です。</p>
+
+  <div class="imgbox imgbox--fill" style="--x:452;--y:193;--w:378;--h:252"><img src="assets/img/geothermal.jpg" alt="山あいの地熱発電所のイラスト"></div>
+</div></div></section>
+
+<!-- ============ 11 中扉 バイオマス発電 ============ -->
+<section class="item" id="s11"><p class="item__no"><b>11</b><em>中扉 ― バイオマス発電</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">バイオマス発電</p>
+  <div class="box div-rule"></div>
+  <p class="e div-sub">無駄にしない</p>
+</div></div></section>
+
+<!-- ============ 12 バイオマス設備容量 ============ -->
+<section class="item" id="s12"><p class="item__no"><b>12</b><em>バイオマス発電 ― 設備容量</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">バイオマス発電</p>
+
+  <div class="imgbox imgbox--fill" style="--x:16;--y:160;--w:408;--h:277"><img src="assets/img/biomass.jpg" alt="木材を燃料にするバイオマス発電所のイラスト"></div>
+
+  <p class="e" style="--x:541;--y:171;--fs:24.5;--fw:700;--co:#0e9e6e">バイオマス設備容量</p>
+
+  <p class="e" style="--x:447;--y:223;--fs:17.5;--fw:700;--lh:1.26">九州電力
+グループ</p>
+  <div class="box" style="--x:556;--y:232;--w:210;--h:22;--r:4;--bg:#17c98e"></div>
+  <p class="e" style="--x:782;--y:237;--fs:12.5;--fw:700;--co:#0e9e6e">53.2万kW</p>
+
+  <p class="e" style="--x:447;--y:284;--fs:17.5;--fw:700;--lh:1.26">北陸電力
+グループ</p>
+  <div class="box" style="--x:556;--y:292;--w:44;--h:22;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:782;--y:298;--fs:12.5;--fw:700">11.2万kW</p>
+
+  <p class="e" style="--x:447;--y:345;--fs:17.5;--fw:700;--lh:1.26">中国電力
+グループ</p>
+  <div class="box" style="--x:556;--y:352;--w:44;--h:22;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:782;--y:359;--fs:12.5;--fw:700">11.2万kW</p>
+
+  <p class="e" style="--x:447;--y:416;--fs:17.5;--fw:700">中部電力</p>
+  <div class="box" style="--x:556;--y:413;--w:19;--h:22;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:782;--y:419;--fs:12.5;--fw:700">4.9万kW</p>
+
+  <div class="box" style="--x:110;--y:452;--w:660;--h:76;--r:6;--bg:#d9d9d9"></div>
+  <p class="e" style="--x:136;--y:455;--fs:17.5;--fw:700;--lh:1.2">九州は林業が盛んな地域で、素材生産量は全国の約4分の1を占めている。
+そのため、間伐材や林地残材などの木材資源をバイオマス燃料として活用
+しやすいという特徴がある。</p>
+</div></div></section>
+
+<!-- ============ 13 バイオマス混焼 ============ -->
+<section class="item" id="s13"><p class="item__no"><b>13</b><em>バイオマス発電の混焼</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">バイオマス発電の混焼</p>
+
+  <div class="imgbox imgbox--fill" style="--x:450;--y:60;--w:379;--h:254"><img src="assets/img/cofire.jpg" alt="石炭とバイオマスを混ぜて燃やす発電所のイラスト"></div>
+
+  <div class="box" style="--x:24;--y:214;--w:410;--h:250;--r:14;--bg:#ff0000"></div>
+  <p class="e ctr w" style="--x:24;--y:238;--w:410;--fs:24.5;--fw:700;--co:#fff">重要語句：バイオマス混焼</p>
+  <div class="box" style="--x:46;--y:292;--w:368;--h:136;--r:8;--bg:#fff"></div>
+  <p class="e" style="--x:59;--y:301;--fs:16;--fw:700;--lh:1.19">石炭などの化石燃料に、バイオマス（木くずと
+いった有機資源）を混ぜて一緒に燃やし、発電
+を行う方法。
+同量の発電を行うために必要な石炭の使用量を
+減らすことができるため、
+「エネルギーの使用の合理化」につながる</p>
+
+  <div class="box circle" style="--x:440;--y:328;--w:163;--h:163;--bg:#f2f2f2"></div>
+  <div class="box circle" style="--x:669;--y:328;--w:163;--h:163;--bg:#f2f2f2"></div>
+  <p class="e" style="--x:497;--y:354;--fs:21;--fw:700;--co:#0e9e6e">石炭</p>
+  <div class="imgbox imgbox--fill" style="--x:460;--y:389;--w:118;--h:100"><img src="assets/img/coal.jpg" alt="石炭"></div>
+  <div class="deco" style="--x:608;--y:380;--w:57;--h:57"><img src="assets/deco/plus.png" alt="プラス"></div>
+  <div class="imgbox imgbox--fill" style="--x:700;--y:376;--w:104;--h:102"><img src="assets/img/wood.jpg" alt="木材"></div>
+  <p class="e" style="--x:701;--y:347;--fs:21;--fw:700;--co:#0e9e6e">バイオマス</p>
+  <p class="e" style="--x:711;--y:372;--fs:21;--fw:700;--co:#0e9e6e">（木材）</p>
+</div></div></section>
+
+<!-- ============ 14 中扉 太陽光発電 ============ -->
+<section class="item" id="s14"><p class="item__no"><b>14</b><em>中扉 ― 太陽光発電</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">太陽光発電</p>
+  <div class="box div-rule"></div>
+  <p class="e div-sub">降り注ぐ恵</p>
+</div></div></section>
+
+<!-- ============ 15 日照時間と太陽光発電の割合 ============ -->
+<section class="item" id="s15"><p class="item__no"><b>15</b><em>日照時間と太陽光発電の割合</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">日照時間と太陽光発電の割合</p>
+
+  <div class="box" style="--x:8;--y:176;--w:406;--h:206;--r:10;--bg:#f2f2f2"></div>
+  <div class="box card" style="--x:60;--y:178;--w:314;--h:42;--r:21;--bg:#fff;--bd:#19c28a"></div>
+  <p class="e ctr w" style="--x:60;--y:186;--w:314;--fs:17.5;--fw:700">年間電力に対する太陽光発電の割合</p>
+
+  <p class="e" style="--x:42;--y:235;--fs:14;--fw:700">九州</p>
+  <div class="box" style="--x:122;--y:238;--w:226;--h:20;--r:4;--bg:#17c98e"></div>
+  <p class="e" style="--x:360;--y:238;--fs:14;--fw:700;--co:#0e9e6e">16.2%</p>
+  <p class="e" style="--x:42;--y:264;--fs:14;--fw:700">東北</p>
+  <div class="box" style="--x:122;--y:268;--w:188;--h:20;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:322;--y:268;--fs:14;--fw:700">13.5%</p>
+  <p class="e" style="--x:42;--y:294;--fs:14;--fw:700">関西</p>
+  <div class="box" style="--x:122;--y:298;--w:92;--h:20;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:227;--y:298;--fs:14;--fw:700">6.7%</p>
+  <p class="e" style="--x:42;--y:324;--fs:14;--fw:700">北陸</p>
+  <div class="box" style="--x:122;--y:328;--w:80;--h:20;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:215;--y:328;--fs:14;--fw:700">5.8%</p>
+
+  <div class="box" style="--x:432;--y:176;--w:394;--h:206;--r:10;--bg:#f2f2f2"></div>
+  <div class="box card" style="--x:558;--y:176;--w:116;--h:42;--r:21;--bg:#fff;--bd:#19c28a"></div>
+  <p class="e ctr w" style="--x:558;--y:186;--w:116;--fs:17.5;--fw:700">日照時間</p>
+
+  <p class="e" style="--x:440;--y:233;--fs:14;--fw:700">宮崎</p>
+  <div class="box" style="--x:492;--y:238;--w:160;--h:20;--r:4;--bg:#17c98e"></div>
+  <p class="e" style="--x:689;--y:232;--fs:13.5;--fw:700;--co:#0e9e6e">5.8時間/日</p>
+  <p class="e" style="--x:440;--y:282;--fs:14;--fw:700">東京</p>
+  <div class="box" style="--x:492;--y:284;--w:146;--h:20;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:665;--y:281;--fs:13.5;--fw:700">5.3時間/日</p>
+  <p class="e" style="--x:440;--y:328;--fs:14;--fw:700">秋田</p>
+  <div class="box" style="--x:492;--y:330;--w:116;--h:20;--r:4;--bg:#7fe0bb"></div>
+  <p class="e" style="--x:644;--y:328;--fs:13.5;--fw:700">4.2時間/日</p>
+
+  <div class="deco" style="--x:693;--y:252;--w:119;--h:116"><img src="assets/deco/arrow15.png" alt=""></div>
+  <div class="imgbox imgbox--fill" style="--x:64;--y:358;--w:264;--h:176"><img src="assets/img/solar.jpg" alt="メガソーラー発電所のイラスト"></div>
+
+  <div class="deco" style="--x:374;--y:385;--w:468;--h:150"><img src="assets/deco/cloud15.png" alt=""></div>
+  <p class="e" style="--x:439;--y:426;--fs:17.5;--fw:700;--lh:1.2">宮崎は秋田より年間約594時間多く、
+1日平均では約1.6時間長い。
+また積雪による太陽光発電量の低下も少ない。</p>
+</div></div></section>
+
+<!-- ============ 16 出力制限 ============ -->
+<section class="item" id="s16"><p class="item__no"><b>16</b><em>太陽光発電　出力制限</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">太陽光発電　出力制限</p>
+
+  <div class="box" style="--x:28;--y:172;--w:408;--h:294;--r:14;--bg:#ff0000"></div>
+  <p class="e ctr w" style="--x:28;--y:189;--w:408;--fs:24.5;--fw:700;--co:#fff">重要語句：出力制限</p>
+  <div class="box" style="--x:50;--y:234;--w:366;--h:216;--r:8;--bg:#fff"></div>
+  <p class="e" style="--x:72;--y:252;--fs:21;--fw:700;--lh:1.2"><span class="mark">電気を使う量</span>と<span class="mark">発電する量</span>を合わ
+せるために、発電する量をコント
+ロールすること。
+晴れた昼間などは太陽光発電が増
+えすぎて電気が余ることがある。
+九州では太陽光発電が多いため、
+出力制御が行われることがある。</p>
+
+  <p class="e" style="--x:460;--y:163;--fs:21;--fw:700">優先給電ルール（出力制御の優先順位）</p>
+
+  <div class="box" style="--x:462;--y:212;--w:342;--h:44;--r:22;--bg:#19c28a"></div>
+  <div class="pill-num" style="--x:470;--y:218;--d:32;--fs:19">1</div>
+  <p class="e" style="--x:510;--y:219;--fs:17.5;--fw:700;--co:#fff">火力の制御、揚水・蓄電池の活用</p>
+
+  <div class="box" style="--x:462;--y:274;--w:318;--h:44;--r:22;--bg:#19c28a"></div>
+  <div class="pill-num" style="--x:470;--y:280;--d:32;--fs:19">2</div>
+  <p class="e" style="--x:511;--y:281;--fs:17.5;--fw:700;--co:#fff">他地域への送電（地域間連系線）</p>
+
+  <div class="box" style="--x:462;--y:336;--w:304;--h:44;--r:22;--bg:#19c28a"></div>
+  <div class="pill-num" style="--x:470;--y:342;--d:32;--fs:19">3</div>
+  <p class="e" style="--x:512;--y:344;--fs:17.5;--fw:700;--co:#fff">バイオマスの出力制御</p>
+
+  <div class="box" style="--x:462;--y:398;--w:276;--h:46;--r:23;--bg:#19c28a"></div>
+  <div class="pill-num" style="--x:470;--y:405;--d:32;--fs:19">4</div>
+  <p class="e" style="--x:511;--y:406;--fs:17.5;--fw:700;--co:#fff">太陽光、風力の出力制御</p>
+
+  <div class="box" style="--x:460;--y:464;--w:254;--h:50;--r:25;--bg:#19c28a"></div>
+  <div class="pill-num" style="--x:470;--y:473;--d:32;--fs:19">5</div>
+  <p class="e" style="--x:510;--y:473;--fs:17.5;--fw:700;--co:#fff">長期固定電源の出力制御</p>
+
+  <div class="deco" style="--x:718;--y:257;--w:116;--h:263"><img src="assets/deco/arrow16.png" alt=""></div>
+</div></div></section>
+
+<!-- ============ 17 中扉 産業との関係 ============ -->
+<section class="item" id="s17"><p class="item__no"><b>17</b><em>中扉 ― 産業との関係</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">産業との関係</p>
+  <div class="box div-rule"></div>
+  <p class="e div-sub">企業の誘致</p>
+</div></div></section>
+
+<!-- ============ 18 産業との関係 ============ -->
+<section class="item" id="s18"><p class="item__no"><b>18</b><em>産業との関係</em></p><div class="stage"><div class="sl">
+  <div class="box head-bar"></div>
+  <p class="e head">産業との関係</p>
+
+  <div class="box" style="--x:38;--y:162;--w:766;--h:86;--r:8;--bg:#f2f2f2"></div>
+  <div class="box" style="--x:56;--y:176;--w:106;--h:60;--r:8;--bg:#19c28a"></div>
+  <p class="e ctr w" style="--x:56;--y:190;--w:106;--fs:21;--fw:700;--co:#fff">現在</p>
+  <p class="e" style="--x:204;--y:181;--fs:18;--fw:700;--lh:1.17">九州では半導体工場などの建設が進み、電力需要の増加が見込まれている。
+九州電力は発電するだけでなく、地域の産業発展を支える役割も持つ。</p>
+
+  <div class="box" style="--x:38;--y:296;--w:358;--h:98;--r:8;--bg:#f2f2f2"></div>
+  <div class="box" style="--x:48;--y:272;--w:184;--h:32;--r:6;--bg:#19c28a"></div>
+  <p class="e" style="--x:62;--y:276;--fs:17.5;--fw:700;--co:#fff">求められる立地条件</p>
+  <p class="e" style="--x:50;--y:304;--fs:14;--fw:700;--lh:1.21">半導体工場は大量の電気を24時間必要とするため、
+「大規模な電力需要に対応できる地域」</p>
+  <p class="e" style="--x:190;--y:337;--fs:14;--fw:700">＋</p>
+  <p class="e" style="--x:50;--y:354;--fs:14;--fw:700;--lh:1.21">「安定した電力系統が整っている地域」が
+求められる。</p>
+
+  <div class="box" style="--x:38;--y:424;--w:358;--h:98;--r:8;--bg:#f2f2f2"></div>
+  <div class="box" style="--x:48;--y:406;--w:144;--h:32;--r:6;--bg:#19c28a"></div>
+  <p class="e" style="--x:69;--y:411;--fs:17.5;--fw:700;--co:#fff">九州の強み</p>
+  <p class="e" style="--x:50;--y:443;--fs:15;--fw:700;--lh:1.27">世界企業は製造時のCO2排出量削減も重視して
+おり、非化石電源が多い九州は産業立地上の
+強みになる。</p>
+
+  <p class="e" style="--x:606;--y:253;--fs:16">企業が集まる</p>
+  <div class="imgbox imgbox--fit" style="--x:618;--y:285;--w:54;--h:43"><img src="assets/img/ic-building.jpg" alt=""></div>
+  <div class="deco" style="--x:565;--y:317;--w:35;--h:44"><img src="assets/deco/cyc-tl.png" alt=""></div>
+  <div class="deco" style="--x:698;--y:318;--w:36;--h:43"><img src="assets/deco/cyc-tr.png" alt=""></div>
+  <div class="imgbox imgbox--fit" style="--x:712;--y:376;--w:47;--h:48"><img src="assets/img/ic-growth.jpg" alt=""></div>
+  <p class="e" style="--x:772;--y:378;--fs:16;--lh:1.15">電力需要
+が増える</p>
+  <div class="deco" style="--x:705;--y:436;--w:34;--h:43"><img src="assets/deco/cyc-br.png" alt=""></div>
+  <div class="imgbox imgbox--fit" style="--x:625;--y:428;--w:45;--h:62"><img src="assets/img/ic-pylon.jpg" alt=""></div>
+  <p class="e ctr w" style="--x:596;--y:492;--w:120;--fs:16;--lh:1.19">電力インフラ
+を強化</p>
+  <div class="deco" style="--x:563;--y:436;--w:39;--h:40"><img src="assets/deco/cyc-bl.png" alt=""></div>
+  <div class="imgbox imgbox--fit" style="--x:526;--y:375;--w:57;--h:47"><img src="assets/img/ic-factory.jpg" alt=""></div>
+  <p class="e" style="--x:403;--y:381;--fs:16;--lh:1.19">さらに企業が
+進出しやすくなる</p>
+  <p class="e ctr w" style="--x:586;--y:365;--w:120;--fs:21;--fw:700;--lh:1.19">生まれる
+好循環</p>
+</div></div></section>
+
+<!-- ============ 19 中扉 クイズ ============ -->
+<section class="item" id="s19"><p class="item__no"><b>19</b><em>中扉 ― クイズ</em></p><div class="stage"><div class="sl">
+  <p class="e div-title w" style="--x:0;--w:842">クイズ</p>
+  <div class="box div-rule"></div>
+  <p class="e div-sub">３問</p>
+</div></div></section>
+
+<!-- ============ 20 クイズ1 ============ -->
+<section class="item" id="s20"><p class="item__no"><b>20</b><em>クイズ 1</em></p><div class="stage"><div class="sl">
+  <p class="e" style="--x:56;--y:115;--fs:20.5;--fw:700">問題：九州電力の電源構成における「非化石電源」の合計比率はどれ？</p>
+  <p class="e" style="--x:56;--y:170;--fs:16;--fw:700">【A】</p><p class="e" style="--x:110;--y:171;--fs:15">65.0%</p>
+  <p class="e" style="--x:56;--y:206;--fs:16;--fw:700">【B】</p><p class="e" style="--x:110;--y:207;--fs:15">51.6%</p>
+  <p class="e" style="--x:56;--y:242;--fs:16;--fw:700">【C】</p><p class="e" style="--x:110;--y:243;--fs:15">33.4%</p>
+  <p class="e" style="--x:56;--y:278;--fs:16;--fw:700">【D】</p><p class="e" style="--x:110;--y:279;--fs:15">15.0%</p>
+  <p class="e answer" style="--x:696;--y:467;--fs:16">正解は「<b>A</b>」</p>
+</div></div></section>
+
+<!-- ============ 21 クイズ2 ============ -->
+<section class="item" id="s21"><p class="item__no"><b>21</b><em>クイズ 2</em></p><div class="stage"><div class="sl">
+  <p class="e" style="--x:56;--y:115;--fs:19.5;--fw:700">問題：地熱発電の「バイナリー発電」で温泉の熱水を温めるのに使われる媒体はどれ？</p>
+  <p class="e" style="--x:56;--y:198;--fs:16;--fw:700">【A】</p><p class="e" style="--x:110;--y:199;--fs:15">アンモニア</p>
+  <p class="e" style="--x:56;--y:235;--fs:16;--fw:700">【B】</p><p class="e" style="--x:110;--y:236;--fs:15">水素</p>
+  <p class="e" style="--x:56;--y:271;--fs:16;--fw:700">【C】</p><p class="e" style="--x:110;--y:272;--fs:15">窒素</p>
+  <p class="e" style="--x:56;--y:307;--fs:16;--fw:700">【D】</p><p class="e" style="--x:110;--y:308;--fs:15">二酸化炭素</p>
+  <p class="e answer" style="--x:696;--y:467;--fs:16">正解は「<b>A</b>」</p>
+</div></div></section>
+
+<!-- ============ 22 クイズ3 ============ -->
+<section class="item" id="s22"><p class="item__no"><b>22</b><em>クイズ 3</em></p><div class="stage"><div class="sl">
+  <p class="e" style="--x:56;--y:115;--fs:20;--fw:700">問題：「優先給電ルール」で最初に出力制御の対象となる電源はどれ？</p>
+  <p class="e" style="--x:56;--y:170;--fs:16;--fw:700">【A】</p><p class="e" style="--x:110;--y:171;--fs:15">火力（石油・ガス・石炭）</p>
+  <p class="e" style="--x:56;--y:206;--fs:16;--fw:700">【B】</p><p class="e" style="--x:110;--y:207;--fs:15">太陽光・風力</p>
+  <p class="e" style="--x:56;--y:242;--fs:16;--fw:700">【C】</p><p class="e" style="--x:110;--y:243;--fs:15">バイオマス</p>
+  <p class="e" style="--x:56;--y:278;--fs:16;--fw:700">【D】</p><p class="e" style="--x:110;--y:279;--fs:15">水力・原子力・地熱</p>
+  <p class="e answer" style="--x:696;--y:467;--fs:16">正解は「<b>A</b>」</p>
+</div></div></section>
+
+</main>
+
+<div class="present-ui" id="presentUi" hidden>
+  <button class="present-ui__zone present-ui__zone--prev" type="button" aria-label="前のスライド"></button>
+  <button class="present-ui__zone present-ui__zone--next" type="button" aria-label="次のスライド"></button>
+  <div class="present-ui__bar">
+    <p class="present-ui__count" id="presentCount">1 / 22</p>
+    <p class="present-ui__label" id="presentLabel">表紙</p>
+    <button class="present-ui__exit" id="exitBtn" type="button">終了 <kbd>Esc</kbd></button>
+  </div>
+  <div class="present-ui__progress"><span id="presentProgress"></span></div>
+</div>
+
+<footer class="foot">
+  <p class="foot__lead">九州電力についてのプレゼンテーション資料（全22ページ）を、1ページずつ再現したものです。</p>
+  <ul class="foot__keys">
+    <li><kbd>←</kbd><kbd>→</kbd> ページ送り</li>
+    <li><kbd>G</kbd> 一覧</li>
+    <li><kbd>F</kbd> 発表モード</li>
+    <li><kbd>Esc</kbd> 終了</li>
+  </ul>
+  <p class="foot__note">学習・発表用の資料であり、九州電力株式会社の公式サイトではありません。</p>
+</footer>
+
+<script src="js/slides.js"></script>
+</body>
+</html>
