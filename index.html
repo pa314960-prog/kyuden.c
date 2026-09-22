@@ -14,17 +14,51 @@
 <body>
 <a class="skip" href="#s1">本文へスキップ</a>
 
-<header class="bar">
-  <p class="bar__title">九州電力 スライド<span>全22ページ</span></p>
-  <span class="bar__spacer"></span>
-  <p class="bar__count" id="count"><b>1</b> / 22</p>
-  <div class="bar__nav">
-    <button class="btn btn--icon" id="prev" type="button" aria-label="前のスライド">←</button>
-    <button class="btn btn--icon" id="next" type="button" aria-label="次のスライド">→</button>
+<header class="bar" id="bar">
+  <div class="bar__row">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span class="brand__name">九州電力 スライド</span>
+    </a>
+    <span class="bar__spacer"></span>
+    <p class="bar__count" id="count"><b>1</b><i>/</i>22</p>
+    <div class="bar__nav">
+      <button class="btn btn--icon" id="prev" type="button" aria-label="前のスライド">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="btn btn--icon" id="next" type="button" aria-label="次のスライド">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <button class="btn" id="gridBtn" type="button" aria-pressed="false" aria-label="一覧表示に切り替え">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h6v5H4zM14 5h6v5h-6zM4 14h6v5H4zM14 14h6v5h-6z"/></svg>
+      <span>一覧</span>
+    </button>
+    <button class="btn btn--accent" id="playBtn" type="button" aria-pressed="false" aria-label="発表モード（全画面）">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+      <span>発表</span>
+    </button>
+    <button class="btn" id="ansBtn" type="button" aria-pressed="false" aria-label="クイズの正解の表示を切り替え"><span>正解を隠す</span></button>
   </div>
-  <button class="btn" id="gridBtn" type="button" aria-pressed="false">一覧</button>
-  <button class="btn" id="ansBtn" type="button" aria-pressed="false">正解を隠す</button>
+  <nav class="chapters" id="chapters" aria-label="章">
+    <a href="#s1" data-from="1">表紙</a>
+    <a href="#s4" data-from="4"><i>01</i>会社概要</a>
+    <a href="#s6" data-from="6"><i>02</i>他社との違い</a>
+    <a href="#s8" data-from="8"><i>03</i>地熱発電</a>
+    <a href="#s11" data-from="11"><i>04</i>バイオマス</a>
+    <a href="#s14" data-from="14"><i>05</i>太陽光</a>
+    <a href="#s17" data-from="17"><i>06</i>産業との関係</a>
+    <a href="#s19" data-from="19"><i>07</i>クイズ</a>
+  </nav>
+  <div class="bar__progress"><span id="progress"></span></div>
 </header>
+
+<section class="intro" id="top">
+  <p class="intro__eyebrow">KYUSHU ELECTRIC POWER</p>
+  <h1 class="intro__title">九州電力</h1>
+  <p class="intro__lead">地熱・バイオマス・太陽光と、九州の産業。<br>発表用スライド全22ページ。</p>
+  <p class="intro__hint"><kbd>←</kbd><kbd>→</kbd> でページ送り／<b>発表</b>で全画面表示</p>
+</section>
 
 <main class="deck" id="deck">
 
@@ -513,9 +547,26 @@
 
 </main>
 
+<div class="present-ui" id="presentUi" hidden>
+  <button class="present-ui__zone present-ui__zone--prev" type="button" aria-label="前のスライド"></button>
+  <button class="present-ui__zone present-ui__zone--next" type="button" aria-label="次のスライド"></button>
+  <div class="present-ui__bar">
+    <p class="present-ui__count" id="presentCount">1 / 22</p>
+    <p class="present-ui__label" id="presentLabel">表紙</p>
+    <button class="present-ui__exit" id="exitBtn" type="button">終了 <kbd>Esc</kbd></button>
+  </div>
+  <div class="present-ui__progress"><span id="presentProgress"></span></div>
+</div>
+
 <footer class="foot">
-  <p>九州電力についてのプレゼンテーション資料（全22ページ）をウェブページとして再現したものです。学習・発表用の資料であり、九州電力株式会社の公式サイトではありません。</p>
-  <p>← → キーでスライドを移動できます。</p>
+  <p class="foot__lead">九州電力についてのプレゼンテーション資料（全22ページ）を、1ページずつ再現したものです。</p>
+  <ul class="foot__keys">
+    <li><kbd>←</kbd><kbd>→</kbd> ページ送り</li>
+    <li><kbd>G</kbd> 一覧</li>
+    <li><kbd>F</kbd> 発表モード</li>
+    <li><kbd>Esc</kbd> 終了</li>
+  </ul>
+  <p class="foot__note">学習・発表用の資料であり、九州電力株式会社の公式サイトではありません。</p>
 </footer>
 
 <script src="js/main.js"></script>
